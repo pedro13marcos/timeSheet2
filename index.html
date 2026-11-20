@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>'Bout Time v0.4</title>
+    <title>'Bout Time v0.5</title>
     
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2c3e50">
@@ -127,6 +127,10 @@
         body.dark-mode .form-manual select, 
         body.dark-mode .area-relatorio select { background: #333333; color: #ffffff; border-color: #555; }
         body.dark-mode .btn-func { background: #2a2a2a; border-color: #555; color: #ddd; }
+        body.dark-mode #btn-in:disabled, 
+        body.dark-mode #btn-break-start:disabled, 
+        body.dark-mode #btn-break-end:disabled, 
+        body.dark-mode #btn-out:disabled { background-color: #383838 !important; color: #777777 !important; cursor: not-allowed; }
         body.dark-mode #status-msg { color: #bbb; }
         body.dark-mode #log-ponto { background: #242424; color: #e0e0e0; }
         body.dark-mode .registro-item { border-bottom-color: #3a3a3a; }
@@ -332,7 +336,7 @@
 
         </div>
         <footer>
-            Deploy: <strong>v0.4 (GitHub / Vercel Production)</strong> — Website developed by <strong>Pedro Marcos</strong> using <strong>vibe coding</strong> — Contact: <a href="mailto:pedromarcos212@gmail.com">pedromarcos212@gmail.com</a>
+            Deploy: <strong>v0.5 (GitHub / Vercel Production)</strong> — Website developed by <strong>Pedro Marcos</strong> using <strong>vibe coding</strong> — Contact: <a href="mailto:pedromarcos212@gmail.com">pedromarcos212@gmail.com</a>
         </footer>
     </div>
 
@@ -536,12 +540,20 @@
                 divFunc.innerHTML = '';
                 nomesAtuais.forEach(nome => {
                     const estado = estadoUsuarios[nome] || { trabalhando: false }, btn = document.createElement('button');
+                    const cor = obterCorFuncionario(nome);
                     btn.className = `btn-func`; btn.innerText = nome;
-                    btn.style.border = usuarioSelecionado === nome ? '3px solid #000' : '1px solid #ccc';
-                    if (estado.trabalhando) { btn.style.backgroundColor = obterCorFuncionario(nome); btn.style.color = 'white'; } 
-                    else { 
-                        btn.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#2a2a2a' : '#fff'; 
-                        btn.style.color = document.body.classList.contains('dark-mode') ? '#ddd' : '#333'; 
+                    btn.style.borderColor = cor;
+                    if (usuarioSelecionado === nome) {
+                        btn.style.boxShadow = `0 0 0 3px ${document.body.classList.contains('dark-mode') ? '#fff' : '#000'}`;
+                    } else {
+                        btn.style.boxShadow = 'none';
+                    }
+                    if (estado.trabalhando) { 
+                        btn.style.backgroundColor = cor; 
+                        btn.style.color = 'white'; 
+                    } else { 
+                        btn.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#252525' : '#fff'; 
+                        btn.style.color = cor; 
                     }
                     btn.onclick = () => selecionar(nome); divFunc.appendChild(btn);
                 });
