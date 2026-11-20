@@ -1,6 +1,6 @@
 {
-  "name": "time-sheet",
-  "version": "1.0.0",
+  "name": "bout-time",
+  "version": "0.2",
   "type": "module",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedro13marcos/timeSheet.git"
+    "url": "git+https://github.com/pedro13marcos/timeSheet2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pedro13marcos/timeSheet/issues"
+    "url": "https://github.com/pedro13marcos/timeSheet2/issues"
   },
-  "homepage": "https://github.com/pedro13marcos/timeSheet#readme",
+  "homepage": "https://github.com/pedro13marcos/timeSheet2#readme",
   "dependencies": {
     "@vercel/postgres": "^0.10.0",
     "web-push": "^3.6.6"

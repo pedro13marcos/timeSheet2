@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time & Schedule System</title>
+    <title>'Bout Time v0.2</title>
     
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2c3e50">
@@ -115,7 +115,7 @@
         
         <div class="sidebar-header">
             <img src="/icon-192.png" alt="Icon" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjQiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjIiIHJ5PSIyIj48L3JlY3Q+PGxpbmUgeDE9IjE2IiB5MT0iMiIgeDI9IjE2IiB5Mj0iNiI+PC9saW5lPjxsaW5lIHgxPSI4IiB5MT0iMiIgeDI9IjgiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSIxMCIgeDI9IjIxIiB5Mj0iMTAiPjwvbGluZT48L3N2Zz4='">
-            <span>Time Web</span>
+            <span>'Bout Time</span>
         </div>
 
         <button id="btn-install-pwa" onclick="instalarPWA()">📲 <span>Install App</span></button>
@@ -286,7 +286,7 @@
 
         </div>
         <footer>
-            Deploy: <strong>v2.1 (GitHub / Vercel Production)</strong> — Website developed by <strong>Pedro Marcos</strong> using <strong>vibe coding</strong> — Contact: <a href="mailto:pedromarcos212@gmail.com">pedromarcos212@gmail.com</a>
+            Deploy: <strong>v0.2 (GitHub / Vercel Production)</strong> — Website developed by <strong>Pedro Marcos</strong> using <strong>vibe coding</strong> — Contact: <a href="mailto:pedromarcos212@gmail.com">pedromarcos212@gmail.com</a>
         </footer>
     </div>
 
@@ -798,7 +798,7 @@
             }
             try {
                 const registroSw = await navigator.serviceWorker.ready;
-                const vapidPublicKey = 'BLP2pXeQEygESXS-kOVGLKqhezPa4eoBMUVVkju8INworuV_rFVNAN8JyulEeo0atnNsb89FS9nYJixPS9R-m6g'; 
+                const vapidPublicKey = 'BHFTdz2Y0628Rcpn4EdnWm67jizZ7WL9gXD-BbkQE6EVC6TNuvDmY8M3M2JG4T-iuS8WWrB7zxs0cHxWPkY27gw'; 
                 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
                 const subscription = await registroSw.pushManager.subscribe({

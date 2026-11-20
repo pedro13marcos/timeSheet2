@@ -10,7 +10,7 @@ self.addEventListener('activate', (event) => {
 
 // Escuta o evento de Push enviado pelo servidor
 self.addEventListener('push', function(event) {
-    let data = { title: 'Time & Schedule System', body: 'Nova atualização na escala!' };
+    let data = { title: "'Bout Time", body: 'Nova atualização na escala!' };
     
     if (event.data) {
         try {

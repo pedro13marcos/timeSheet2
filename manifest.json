@@ -1,6 +1,6 @@
 {
-  "name": "Time & Schedule System",
-  "short_name": "TimeWeb",
+  "name": "'Bout Time",
+  "short_name": "'Bout Time",
   "description": "System for shift management and clock in/out tracking",
   "start_url": "/",
   "display": "standalone",
